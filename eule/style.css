@@ -4,6 +4,7 @@ body{
     font-family: 'Comic Neue', cursive;
     overflow-x: hidden;
     box-sizing: border-box;
+    touch-action: manipulation;
 }
 .back{
     background-image: url("./mehmet.jpg");
