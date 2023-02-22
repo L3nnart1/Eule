@@ -126,6 +126,8 @@ body{
     }
 }
 .sold{
+    opacity: 0;
+    pointer-events: none;
     position: fixed;
     top: -200vh;
     border-radius: 20px;
@@ -135,7 +137,9 @@ body{
     text-align: center;
 }
 .sold.open{
+    pointer-events: all;
     top: 0;
+    opacity: 1;
 }
 .content{
     position: fixed;
@@ -210,6 +214,10 @@ body{
         transform: scaleX(1);
     }
 }
+#btn{
+    background-color: gray;
+    border-radius: none;
+}
 footer{
     bottom: 0;
     margin: 0;
@@ -217,4 +225,7 @@ footer{
     font-weight: 800;
     font-size: 3vw;
     color: green;
+}
+#close{
+    z-index: 99;
 }
