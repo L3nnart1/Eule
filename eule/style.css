@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    background-color: red;
+    font-family: 'Comic Neue', cursive;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.back{
+    background-image: url("./mehmet.jpg");
+    background-size: 85vw 150vh;
+    z-index: -2;
+    position: absolute;
+    object-fit: contain;
+    width: 85vw;
+    height: 150vh;
+    left: 7.5vw;
+    top: -20vh;
+    filter: saturate(0.1);
+}
+.cover{
+    z-index: -1;
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    height: 282vh;
+    background-color: rgb(145, 145, 145);
+    filter: opacity(0.5);
+}
+.title{
+    width: fit-content;
+    font-size: 8vw;
+    font-family: 'Comic Neue', cursive;
+    margin: 5vh auto 0 auto;
+    color: green;
+    text-shadow: 0 0 20px black;
+    animation: move 1s ease-in-out infinite forwards;
+}
+@keyframes move {
+    50%{
+        transform: scale(1.2);
+        color: red;
+    }
+    100%{
+        transform: scale(1);
+        color: green;
+    }
+}
+.desc{
+    width: 50vw;
+    font-family: 'Comic Neue', cursive;
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 15vh auto 0 auto;
+    text-align: center;
+    color: blue;
+    background-color: rgb(216, 216, 216);
+    box-shadow: 0 0 10px black inset;
+}
+
+.wow{
+    margin-left: 20vw;
+    width: 60vw;
+    height: 35vh;
+    position: absolute;
+}
+.value{
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    width: 60vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 2vw;
+}
+.value > img{
+    width: 20vw;
+    height: 50vh;
+    box-shadow: 0 0 0 10px black;
+}
+.v-title{
+    color: blue;
+    animation: spin 3s linear infinite forwards;
+}
+.v-desc{
+    width: max(20vw, 300px);
+    font-size: max(1.2vw, 20px);
+    font-weight: 700;
+    text-decoration: underline;
+    color: rgb(183, 0, 255);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.center{
+    padding-right: 10vw;
+    width: max(50vw, 350px);
+}
+
+.value-2{
+    margin-top: 60vh;
+    margin-bottom: 10vh;
+    width: 60vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 2vw;
+}
+.value-2 > img{
+    width: 20vw;
+    height: 50vh;
+    box-shadow: 0 0 0 10px rgb(11, 255, 3);
+}
+.v-desc > button {
+    margin-top: 3vh;
+}
+@keyframes spin {
+    50%{
+        transform: scale(0.4);
+    }
+    100%{
+        transform: scale(1);
+        rotate: 360deg;
+    }
+}
+.sold{
+    position: fixed;
+    top: -200vh;
+    border-radius: 20px;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+.sold.open{
+    top: 0;
+}
+.content{
+    position: fixed;
+    top: 0;
+    border-radius: 20px;
+    width: 50vw;
+    height: 70vh;
+    margin-left: 25vw;
+    margin-top: 15vh;
+    color: blue;
+    background-color: rgb(158, 111, 202);
+    font-size: 2vw;
+}
+.content > h2{
+    font-size: 3vw;
+    font-weight: 700;
+    color: green;
+    margin-top: 9vh;
+    margin-bottom: 10vh;
+}
+.content > button{
+    position: absolute;
+    font-size: 2vw;
+    font-weight: 700;
+    color: green;
+    background-color: red;
+    margin-top: 12vh;
+    animation: run 1s linear infinite forwards;
+}
+@keyframes run {
+    25%{
+        left: -10vw;
+        transform: scale(1.5);
+    }
+    49%{
+        left: -10vw;
+        transform: scale(1.5);
+    }
+    50%{
+        top: -20vh;
+        left: 50vw;
+        transform: scale(1);
+    }
+    74%{
+        top: -20vh;
+        left: 50vw;
+        transform: scale(1);
+    }
+    75%{
+        top: 50vh;
+        left: 10vw;
+    }
+    90%{
+        top: 40vh;
+        left: 20vw;
+        transform: scale(5);
+    }
+}
+.scam{
+    font-size: 10vw;
+    color: rgb(0, 26, 255);
+    text-align: center;
+    text-decoration: line-through black;
+    background-color: white;
+    animation: skeil 1s ease-in-out infinite forwards;
+}
+@keyframes skeil {
+    50%{
+        transform: scaleX(2);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+footer{
+    bottom: 0;
+    margin: 0;
+    text-align: center;
+    font-weight: 800;
+    font-size: 3vw;
+    color: green;
+}
